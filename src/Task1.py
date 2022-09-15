@@ -11,9 +11,9 @@ def decorator_1(func):
             func(*args, **kwargs)
         end = time.perf_counter()
         exec_time = end - start
-        print(f"{func.__name__} call {wrapper_time_call.count} executed in %.5f sec" % exec_time)# round(exec_time, 5)
+        print(f"{func.__name__} call {wrapper_time_call.count} executed in %.5f sec" % exec_time)
+        return f
 
     wrapper_time_call.count = 0
     return wrapper_time_call
-
 
