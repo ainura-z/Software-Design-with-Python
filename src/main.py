@@ -5,17 +5,20 @@ import random
 @decorator_2
 def func_1():
     """
-    I am ready to Start
-    dvszdv
+    This function does something useful
+    :param bar1: description
+    :param bar2: description
     """
     result = 0
     n = random.randint(10, 751)
     for i in range(n):
         result += (i ** 2)
 
-
 @decorator_2
-def func_2(n=2, m=5):
+def func_2(bar1, n=2, m=5):
+    """
+    func_2
+    """
     print("I am ready to do serious stuff")
     max_val = float('-inf')
     n = random.randint(10,751)
@@ -28,4 +31,4 @@ def func_2(n=2, m=5):
 if __name__ == '__main__':
     func_1()
     # func_1()
-    func_2()
+    func_2(None, n="")
