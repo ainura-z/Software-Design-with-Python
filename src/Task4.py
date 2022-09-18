@@ -1,5 +1,4 @@
 from Task1 import decorator_1
-from Task2 import decorator_2
 from Task3 import decorator_3
 import traceback
 from contextlib import redirect_stdout
