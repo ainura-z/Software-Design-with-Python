@@ -5,7 +5,7 @@ from Task4 import decorator_1_error, decorator_2_error, decorator_3_error
 from math import sqrt
 
 
-@decorator_3_error
+@decorator_2
 def sort_list_of_tuples(lst):
     """This function is sorting list of tuples"""
     print(f"Original list of tuples:{lst}")
@@ -14,7 +14,7 @@ def sort_list_of_tuples(lst):
     return lst
 
 
-@decorator_3_error
+@decorator_2
 def palindromes(lst):
     """
     This function is looking for
@@ -25,7 +25,7 @@ def palindromes(lst):
     print(result)
 
 
-@decorator_3_error
+@decorator_2
 def pascal_triangle(n):
     """ This function prints the Pascal's triangle n layers"""
 
@@ -39,7 +39,7 @@ def pascal_triangle(n):
         row = [sum(x) for x in zip([0] + row, row + [0])]
 
 
-@decorator_3_error
+@decorator_2
 def quadratic_equation_solver(a, b, c=1):
     """
     This function solves a quadratic
@@ -75,17 +75,17 @@ if __name__ == '__main__':
     palindrome_list = ['aba', 'aaa', 'bba', 'a']
 
     # Task1, Task2
-    # sort_list_of_tuples(name_age)
-    # pascal_triangle(5)
-    # pascal_triangle(1)
-    # quadratic_equation_solver(1, 1, 1)
-    # palindromes(palindrome_list)
-    # quadratic_equation_solver(5, 0, c=2)
-    # pascal_triangle(10)
-    #
+    sort_list_of_tuples(name_age)
+    pascal_triangle(5)
+    pascal_triangle(1)
+    quadratic_equation_solver(1, 1, 1)
+    palindromes(palindrome_list)
+    quadratic_equation_solver(5, 0, c=2)
+    pascal_triangle(10)
+
     # # Task3
     # plot_rank()
-    #
+
     # Task4
-    pascal_triangle(-1)
-    quadratic_equation_solver(0, 1, 1)
+    # pascal_triangle(-1)
+    # quadratic_equation_solver(0, 1, 1)
