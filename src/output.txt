@@ -1,0 +1,295 @@
+pascal_triangle call 1 executed in 0.00000 sec 
+Name:     pascal_triangle
+Type:     <class 'function'>
+Sign:     (n)
+Args:     positional(0,)
+          key=worded{}
+
+Doc:      This function prints the Pascal's triangle n layers
+
+Source:   @decorator_3_error
+          def pascal_triangle(n):
+              """ This function prints the Pascal's triangle n layers"""
+
+              if n < 0:
+                  print("Input a number greater than 0")
+                  raise Exception("n cannot be less than 0")
+
+              row = [1]
+              for i in range(n):
+                  print(row)
+                  row = [sum(x) for x in zip([0] + row, row + [0])]
+
+
+Output:   
+
+quadratic_equation_solver call 1 executed in 0.00002 sec 
+Name:     quadratic_equation_solver
+Type:     <class 'function'>
+Sign:     (a, b, c=1)
+Args:     positional(5, 1, 1)
+          key=worded{}
+
+Doc:      This function solves a quadratic
+          equation a*x^2 + b*x + c = 0
+          and print the result
+
+Source:   @decorator_3_error
+          def quadratic_equation_solver(a, b, c=1):
+              """
+              This function solves a quadratic
+              equation a*x^2 + b*x + c = 0
+              and print the result
+              """
+              if a == 0:
+                  print("This is a linear equation")
+                  raise ZeroDivisionError("a cannot be 0")
+              # calculating the discriminant
+              discriminant = b*b - 4*a*c
+              # calculating the root of discriminant
+              sqrt_discriminant = sqrt(abs(discriminant))
+              # considering 3 cases
+              if discriminant > 0:
+                  x1 = (-b + sqrt_discriminant)/(2*a)
+                  x2 = (-b - sqrt_discriminant)/(2*a)
+                  print("D>0:\nTwo real roots:")
+                  print(f"x1 = {x1} \nx2 = {x2}")
+              elif discriminant == 0:
+                  x = -b/2*a
+                  print("D=0:\nOne real root:")
+                  print("x = ", x)
+              else:
+                  x1_real = - b / (2 * a)
+                  x1_imaginary = sqrt_discriminant/(2*a)
+                  print("D<0:\nTwo complex roots:")
+                  print(f"x1 = {x1_real} + i*{x1_imaginary} \nx2 = {x1_real} - i*{x1_imaginary}")
+
+
+Output:   D<0:
+          Two complex roots:
+          x1 = -0.1 + i*0.4358898943540674 
+          x2 = -0.1 - i*0.4358898943540674
+
+
+pascal_triangle call 1 executed in 0.00001 sec 
+Name:     pascal_triangle
+Type:     <class 'function'>
+Sign:     (n)
+Args:     positional(0,)
+          key=worded{}
+
+Doc:      This function prints the Pascal's triangle n layers
+
+Source:   @decorator_3_error
+          def pascal_triangle(n):
+              """ This function prints the Pascal's triangle n layers"""
+
+              if n < 0:
+                  print("Input a number greater than 0")
+                  raise Exception("n cannot be less than 0")
+
+              row = [1]
+              for i in range(n+1):
+                  print(row)
+                  row = [sum(x) for x in zip([0] + row, row + [0])]
+
+
+Output:   [1]
+
+
+quadratic_equation_solver call 1 executed in 0.00002 sec 
+Name:     quadratic_equation_solver
+Type:     <class 'function'>
+Sign:     (a, b, c=1)
+Args:     positional(5, 1, 1)
+          key=worded{}
+
+Doc:      This function solves a quadratic
+          equation a*x^2 + b*x + c = 0
+          and print the result
+
+Source:   @decorator_3_error
+          def quadratic_equation_solver(a, b, c=1):
+              """
+              This function solves a quadratic
+              equation a*x^2 + b*x + c = 0
+              and print the result
+              """
+              if a == 0:
+                  print("This is a linear equation")
+                  raise ZeroDivisionError("a cannot be 0")
+              # calculating the discriminant
+              discriminant = b*b - 4*a*c
+              # calculating the root of discriminant
+              sqrt_discriminant = sqrt(abs(discriminant))
+              # considering 3 cases
+              if discriminant > 0:
+                  x1 = (-b + sqrt_discriminant)/(2*a)
+                  x2 = (-b - sqrt_discriminant)/(2*a)
+                  print("D>0:\nTwo real roots:")
+                  print(f"x1 = {x1} \nx2 = {x2}")
+              elif discriminant == 0:
+                  x = -b/2*a
+                  print("D=0:\nOne real root:")
+                  print("x = ", x)
+              else:
+                  x1_real = - b / (2 * a)
+                  x1_imaginary = sqrt_discriminant/(2*a)
+                  print("D<0:\nTwo complex roots:")
+                  print(f"x1 = {x1_real} + i*{x1_imaginary} \nx2 = {x1_real} - i*{x1_imaginary}")
+
+
+Output:   D<0:
+          Two complex roots:
+          x1 = -0.1 + i*0.4358898943540674 
+          x2 = -0.1 - i*0.4358898943540674
+
+
+pascal_triangle call 1 executed in 0.00003 sec 
+Name:     pascal_triangle
+Type:     <class 'function'>
+Sign:     (n)
+Args:     positional(0,)
+          key=worded{}
+
+Doc:      This function prints the Pascal's triangle n layers
+
+Source:   @decorator_3_error
+          def pascal_triangle(n):
+              """ This function prints the Pascal's triangle n layers"""
+
+              if n < 0:
+                  print("Input a number greater than 0")
+                  raise Exception("n cannot be less than 0")
+
+              row = [1]
+              for i in range(n+1):
+                  print(row)
+                  row = [sum(x) for x in zip([0] + row, row + [0])]
+
+
+Output:   [1]
+
+
+quadratic_equation_solver call 1 executed in 0.00001 sec 
+Name:     quadratic_equation_solver
+Type:     <class 'function'>
+Sign:     (a, b, c=1)
+Args:     positional(5, 1, 1)
+          key=worded{}
+
+Doc:      This function solves a quadratic
+          equation a*x^2 + b*x + c = 0
+          and print the result
+
+Source:   @decorator_3_error
+          def quadratic_equation_solver(a, b, c=1):
+              """
+              This function solves a quadratic
+              equation a*x^2 + b*x + c = 0
+              and print the result
+              """
+              if a == 0:
+                  print("This is a linear equation")
+                  raise ZeroDivisionError("a cannot be 0")
+              # calculating the discriminant
+              discriminant = b*b - 4*a*c
+              # calculating the root of discriminant
+              sqrt_discriminant = sqrt(abs(discriminant))
+              # considering 3 cases
+              if discriminant > 0:
+                  x1 = (-b + sqrt_discriminant)/(2*a)
+                  x2 = (-b - sqrt_discriminant)/(2*a)
+                  print("D>0:\nTwo real roots:")
+                  print(f"x1 = {x1} \nx2 = {x2}")
+              elif discriminant == 0:
+                  x = -b/2*a
+                  print("D=0:\nOne real root:")
+                  print("x = ", x)
+              else:
+                  x1_real = - b / (2 * a)
+                  x1_imaginary = sqrt_discriminant/(2*a)
+                  print("D<0:\nTwo complex roots:")
+                  print(f"x1 = {x1_real} + i*{x1_imaginary:.4f} \nx2 = {x1_real} - i*{x1_imaginary:.4f}")
+
+
+Output:   D<0:
+          Two complex roots:
+          x1 = -0.1 + i*0.4359 
+          x2 = -0.1 - i*0.4359
+
+
+pascal_triangle call 1 executed in 0.00001 sec 
+Name:     pascal_triangle
+Type:     <class 'function'>
+Sign:     (n)
+Args:     positional(0,)
+          key=worded{}
+
+Doc:      This function prints the Pascal's triangle n layers
+
+Source:   @decorator_3_error
+          def pascal_triangle(n):
+              """ This function prints the Pascal's triangle n layers"""
+
+              if n < 0:
+                  print("Input a number greater than 0")
+                  raise Exception("n cannot be less than 0")
+
+              row = [1]
+              for i in range(n+1):
+                  print(row)
+                  row = [sum(x) for x in zip([0] + row, row + [0])]
+
+
+Output:   [1]
+
+
+quadratic_equation_solver call 1 executed in 0.00001 sec 
+Name:     quadratic_equation_solver
+Type:     <class 'function'>
+Sign:     (a, b, c=1)
+Args:     positional(5, 1, 1)
+          key=worded{}
+
+Doc:      This function solves a quadratic
+          equation a*x^2 + b*x + c = 0
+          and print the result
+
+Source:   @decorator_3_error
+          def quadratic_equation_solver(a, b, c=1):
+              """
+              This function solves a quadratic
+              equation a*x^2 + b*x + c = 0
+              and print the result
+              """
+              if a == 0:
+                  print("This is a linear equation")
+                  raise ZeroDivisionError("a cannot be 0")
+              # calculating the discriminant
+              discriminant = b*b - 4*a*c
+              # calculating the root of discriminant
+              sqrt_discriminant = sqrt(abs(discriminant))
+              # considering 3 cases
+              if discriminant > 0:
+                  x1 = (-b + sqrt_discriminant)/(2*a)
+                  x2 = (-b - sqrt_discriminant)/(2*a)
+                  print("D>0:\nTwo real roots:")
+                  print(f"x1 = {x1} \nx2 = {x2}")
+              elif discriminant == 0:
+                  x = -b/2*a
+                  print("D=0:\nOne real root:")
+                  print("x = ", x)
+              else:
+                  x1_real = - b / (2 * a)
+                  x1_imaginary = sqrt_discriminant/(2*a)
+                  print("D<0:\nTwo complex roots:")
+                  print(f"x1 = {x1_real} + i*{x1_imaginary:.4f} \nx2 = {x1_real} - i*{x1_imaginary:.4f}")
+
+
+Output:   D<0:
+          Two complex roots:
+          x1 = -0.1 + i*0.4359 
+          x2 = -0.1 - i*0.4359
+
+

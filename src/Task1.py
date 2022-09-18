@@ -1,19 +1,20 @@
-import contextlib
+from contextlib import redirect_stdout
 import time
 import io
 
+
 def decorator_1(func):
     """Print the function execution time and function call trace"""
-    def wrapper_time_call(*args, **kwargs):
+    def wrapper(*args, **kwargs):
+        wrapper.count += 1
         start = time.perf_counter()
-        wrapper_time_call.count += 1
-        with contextlib.redirect_stdout(io.StringIO()) as f:
-            func(*args, **kwargs)
+        with redirect_stdout(io.StringIO()) as f:
+            func_res = func(*args, **kwargs)
         end = time.perf_counter()
         exec_time = end - start
-        print(f"{func.__name__} call {wrapper_time_call.count} executed in %.5f sec" % exec_time)
-        return f
+        print(f"{func.__name__} call {wrapper.count} executed in %.5f sec" % exec_time)
+        return func_res, f.getvalue()
 
-    wrapper_time_call.count = 0
-    return wrapper_time_call
+    wrapper.count = 0
+    return wrapper
 
