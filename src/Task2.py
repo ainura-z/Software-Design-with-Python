@@ -1,15 +1,15 @@
 from Task1 import decorator_1
-import contextlib
-import time
-import io
 from inspect import signature, getdoc, getsource
 import textwrap
 
 
 def decorator_2(func):
-    def wrapper_time_call(*args, **kwargs):
-        dec_1 = decorator_1(func)(*args, **kwargs)
-
+    """
+    Print the function execution time,
+    function call trace and original source code of the function
+    """
+    def wrapper(*args, **kwargs):
+        func_res, output = decorator_1(func)(*args, **kwargs)
         ind = 10
         print("Name:".ljust(ind), func.__name__)
         print("Type:".ljust(ind), type(func))
@@ -23,8 +23,10 @@ def decorator_2(func):
         source = textwrap.indent(text=getsource(func), prefix=(ind+1)*' ')[ind+1:]
         print("Source:".ljust(ind), source)
 
-        output = textwrap.indent(text=dec_1.getvalue(), prefix=(ind+1)*' ')[ind+1:]
+        output = textwrap.indent(text=output, prefix=(ind+1)*' ')[ind+1:]
         print("Output:".ljust(ind), output, '\n')
 
-    return wrapper_time_call
+        return func_res
+
+    return wrapper
 
