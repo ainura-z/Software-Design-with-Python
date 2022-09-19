@@ -1,7 +1,7 @@
 from Task1 import decorator_1
 from Task2 import decorator_2
 from Task3 import decorator_3, plot_rank
-from Task4 import decorator_1_error, decorator_3_error
+from Task4 import decorator_3_error
 from math import sqrt
 
 
